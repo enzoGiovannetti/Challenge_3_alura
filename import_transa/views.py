@@ -4,4 +4,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('<h1>TENHA FÉ</h1>')
+    return render(request,'index.html')

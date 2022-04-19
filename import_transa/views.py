@@ -4,4 +4,9 @@ from django.http import HttpResponse
 
 
 def index(request):
+    if request.method == 'POST':
+        uploaded_file = request.FILES['document']
+        print(uploaded_file.name)
+        print(uploaded_file.size)
+
     return render(request,'index.html')

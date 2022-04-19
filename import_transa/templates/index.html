@@ -10,6 +10,16 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
+    <div>
+        <h2>Importação</h2>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="document" >
+            <button type="submit">Upload de arquivo</button>
+        </form>
+
+    </div>
     
 </body>
 </html>
